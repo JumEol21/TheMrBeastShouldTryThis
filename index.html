@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Image</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
+    <style>
+        .container {
+            display: flex;
+        }
+        .image-container {
+            margin-right: 20px;
+        }
+        .button-box {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #0074d9;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>MrBeastShouldTryThis</h1>
+    <div class="container">
+        <div class="image-container">
+            <img src="C:/ksi.jpg"  
+
+        <div class="button-box">
+            <button class="button" id="mrBeastButton">Click here if you are MrBeast</button>
+            <button class="button" id="donateButton">Donate</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.getElementById("mrBeastButton").addEventListener("click", function () {
+            Swal.fire({
+                title: 'Verification',
+                text: 'Are you MrBeast?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=GJINgzHGvG-jS1CD"; // Replace with your YouTube link
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    window.location.href = "https://youtu.be/8xw0iPwELjw?si=dZL9R5UYzdLj7BxJ"; // Replace with another YouTube link or any URL you prefer
+                }
+            });
+        });
+
+        document.getElementById("donateButton").addEventListener("click", function () {
+            window.location.href = "https://sociabuzz.com/blackorgreen"; // Replace with your donation link
+        });
+    </script>
+</body>
+</html>
